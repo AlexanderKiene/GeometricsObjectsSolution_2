@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeometricsObjects
 {
-    class Circle
+    public class Circle
     {
         #region Private Felder
 
@@ -36,6 +36,39 @@ namespace GeometricsObjects
 
         public double XCoordinate { get => _XCoordinate; set => _XCoordinate = value; }
         public double YCoordinate { get => _YCoordinate; set => _YCoordinate = value; }
+
+        #endregion
+
+        #region Öffentliche Methoden
+
+        public double GetArea()
+        {
+            return Math.Pow(Radius, 2) * Math.PI;
+        }
+
+        public double GetCircumference()
+        {
+            return 2 * Radius * Math.PI;
+        }
+
+        public void Move(double dx, double dy)
+        {
+            XCoordinate += dx;
+            YCoordinate += dy;
+        }
+
+        public void Move(double dx, double dy, int dRadius)
+        {
+            Move(dx, dy);
+            Radius += dRadius;
+        }
+
+        public int Bigger(Circle kreisCircle)
+        {
+            if (kreisCircle == null || Radius > kreisCircle.Radius) return 1;
+            if (Radius < kreisCircle.Radius) return -1;
+            return 0;
+        }
 
         #endregion
     }
