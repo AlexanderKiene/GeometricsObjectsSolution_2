@@ -10,11 +10,12 @@ namespace GeometricsObjects
     {
         static void Main(string[] args)
         {
-            Circle kreis = new Circle();
+            // TODO
 
-            kreis.Radius = 10;
+            Circle kreis1 = new Circle(12);
+            Circle kreis2 = new Circle(30);
 
-            Console.WriteLine($"Der Kreisradius beträgt: {kreis.Radius}");
+            Console.WriteLine($"Grösster Kreis = {Circle.Bigger(kreis1, kreis2)}");
 
             Console.ReadKey();
         }

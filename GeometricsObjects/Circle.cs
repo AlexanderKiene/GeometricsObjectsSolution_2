@@ -45,7 +45,7 @@ namespace GeometricsObjects
             get => _Radius;
             set
             {
-                if (value > 0)
+                if (value >= 0)
                 {
                     _Radius = value;
                 }
@@ -115,10 +115,16 @@ namespace GeometricsObjects
             if (kreis1 == null) return -1;
             if (kreis2 == null) return 1;
             if (kreis1.Radius > kreis2.Radius) return 1;
-            if (kreis2.Radius < kreis2.Radius) return -1;
+            if (kreis1.Radius < kreis2.Radius) return -1;
 
             return 0;
         }
+
+        #endregion
+
+        #region Destruktor
+
+        ~Circle() { }
 
         #endregion
     }
