@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,7 +39,7 @@ namespace GeometricsObjects
         }
         #endregion
 
-        #region Öffentliche Eigenschaften
+        #region Eigenschaften
 
         public int Radius
         {
@@ -62,7 +63,7 @@ namespace GeometricsObjects
 
         #endregion
 
-        #region Öffentliche Methoden
+        #region Instanzmethoden
 
         public double GetArea()
         {

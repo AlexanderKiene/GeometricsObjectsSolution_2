@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,9 +16,9 @@ namespace GeometricsObjects
             Circle kreis1 = new Circle(12);
             Circle kreis2 = new Circle(30);
 
-            Console.WriteLine($"Grösster Kreis = {Circle.Bigger(kreis1, kreis2)}");
+            WriteLine($"Grösster Kreis = {Circle.Bigger(kreis1, kreis2)}");
 
-            Console.ReadKey();
+            ReadKey();
         }
     }
 }
