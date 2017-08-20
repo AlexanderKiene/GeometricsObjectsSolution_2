@@ -8,12 +8,34 @@ namespace GeometricsObjects
 {
     public class Circle
     {
+        #region Statische Klassenfelder
+
+        private static int _CountCircles;
+
+        #endregion
+
         #region Private Felder
 
         private double _XCoordinate;
         private double _YCoordinate;
         private int _Radius;
 
+        #endregion
+
+        #region Konstruktoren
+
+        public Circle() : this(0, 0, 0) { }
+        
+
+        public Circle(int radius) : this(radius, 0, 0) { }
+
+        public Circle(int radius, double x, double y)
+        {
+            XCoordinate = x;
+            YCoordinate = y;
+            Radius = radius;
+            _CountCircles++;
+        }
         #endregion
 
         #region Öffentliche Eigenschaften
@@ -36,6 +58,7 @@ namespace GeometricsObjects
 
         public double XCoordinate { get => _XCoordinate; set => _XCoordinate = value; }
         public double YCoordinate { get => _YCoordinate; set => _YCoordinate = value; }
+        public static int CountCircles { get => _CountCircles; }
 
         #endregion
 
@@ -50,6 +73,8 @@ namespace GeometricsObjects
         {
             return 2 * Radius * Math.PI;
         }
+
+       
 
         public void Move(double dx, double dy)
         {
@@ -67,6 +92,31 @@ namespace GeometricsObjects
         {
             if (kreisCircle == null || Radius > kreisCircle.Radius) return 1;
             if (Radius < kreisCircle.Radius) return -1;
+            return 0;
+        }
+
+        #endregion
+
+        #region Klassenmethoden
+
+        public static double GetArea(int radius)
+        {
+            return Math.Pow(radius, 2) * Math.PI;
+        }
+
+        public static double GetCircumference(int radius)
+        {
+            return 2 * radius * Math.PI;
+        }
+
+        public static int Bigger(Circle kreis1, Circle kreis2)
+        {
+            if (kreis1 == null && kreis2 == null) return 0;
+            if (kreis1 == null) return -1;
+            if (kreis2 == null) return 1;
+            if (kreis1.Radius > kreis2.Radius) return 1;
+            if (kreis2.Radius < kreis2.Radius) return -1;
+
             return 0;
         }
 
