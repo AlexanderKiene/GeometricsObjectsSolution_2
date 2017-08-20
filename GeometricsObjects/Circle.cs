@@ -96,6 +96,11 @@ namespace GeometricsObjects
             return 0;
         }
 
+        public override string ToString()
+        {
+            return "Circle, R=" + Radius + ",Fläche=" + GetArea();
+        }
+
         #endregion
 
         #region Klassenmethoden
