@@ -15,7 +15,7 @@ namespace GeometricsObjects
 
             GraphicCircle gCircle = new GraphicCircle();
 
-            gCircle.Draw();
+            Console.WriteLine($"Anzahl der Kreise = {GraphicCircle.CountCircles}");
 
             ReadKey();
         }

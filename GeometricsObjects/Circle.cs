@@ -11,7 +11,7 @@ namespace GeometricsObjects
     {
         #region Statische Klassenfelder
 
-        private static int _CountCircles;
+        protected static int _CountCircles;
 
         #endregion
 
@@ -19,7 +19,7 @@ namespace GeometricsObjects
 
         private double _XCoordinate;
         private double _YCoordinate;
-        private int _Radius;
+        protected int _Radius;
 
         #endregion
 
