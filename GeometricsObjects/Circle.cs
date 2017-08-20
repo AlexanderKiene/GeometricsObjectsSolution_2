@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace GeometricsObjects
 {
-    public class Circle
+    public class Circle : GeometricObject
     {
         #region Statische Klassenfelder
 
-        protected static int _CountCircles;
+        private static int _CountCircles;
 
         #endregion
 
@@ -57,8 +57,8 @@ namespace GeometricsObjects
             }
         }
 
-        public double XCoordinate { get => _XCoordinate; set => _XCoordinate = value; }
-        public double YCoordinate { get => _YCoordinate; set => _YCoordinate = value; }
+        public  double XCoordinate { get => _XCoordinate; set => _XCoordinate = value; }
+        public  double YCoordinate { get => _YCoordinate; set => _YCoordinate = value; }
         public static int CountCircles { get => _CountCircles; }
 
         #endregion

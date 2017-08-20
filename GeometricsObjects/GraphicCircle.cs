@@ -31,6 +31,7 @@ namespace GeometricsObjects
             Circle._CountCircles++;
         }
 #endregion
+
         #region Eigenschaften
 
         public int Radius
