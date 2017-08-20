@@ -13,10 +13,9 @@ namespace GeometricsObjects
         {
             // TODO
 
-            Circle kreis1 = new Circle(12);
-            Circle kreis2 = new Circle(30);
+            GraphicCircle gCircle = new GraphicCircle();
 
-            WriteLine($"Grösster Kreis = {Circle.Bigger(kreis1, kreis2)}");
+            gCircle.Draw();
 
             ReadKey();
         }
