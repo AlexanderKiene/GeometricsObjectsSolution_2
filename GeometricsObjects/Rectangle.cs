@@ -73,12 +73,12 @@ namespace GeometricsObjects
 
         #region Instanzmethoden
 
-        public double GetArea()
+        public override double GetArea()
         {
             return Length * Width;
         }
 
-        public double GetCircumference()
+        public override double GetCircumference()
         {
             return (2 * Length) + (2 * Width);
         }

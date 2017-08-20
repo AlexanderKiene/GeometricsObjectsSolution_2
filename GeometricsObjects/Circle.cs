@@ -65,12 +65,12 @@ namespace GeometricsObjects
 
         #region Instanzmethoden
 
-        public double GetArea()
+        public override double GetArea()
         {
             return Math.Pow(Radius, 2) * Math.PI;
         }
 
-        public double GetCircumference()
+        public override double GetCircumference()
         {
             return 2 * Radius * Math.PI;
         }
